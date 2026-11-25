@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - Discover Nasugbu</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
+body{background:#FFFDF0;}
+.top{background:#1B5E20;color:#fff;padding:12px;text-align:center;position:sticky;top:0;z-index:10;}
+.logo{background:#FFC107;color:#000;padding:3px 8px;border-radius:5px;font-weight:900;font-size:12px;}
+.top a{color:#C8E6C9;text-decoration:none;margin:0 6px;font-size:11px;font-weight:bold;}
+.top a.active{color:#FFEB3B;border-bottom:2px solid #FFEB3B;}
+.hero{background:#111;color:white;padding:30px 15px;text-align:center;}
+.hero img{width:100%;max-width:400px;height:160px;object-fit:cover;border-radius:12px;border:3px solid #FFC107;margin-bottom:12px;}
+.hero h1{font-size:28px;}
+.hero p{font-size:12px;color:#aaa;margin-top:5px;}
+.cards{padding:12px;display:grid;grid-template-columns:1fr;gap:10px;max-width:800px;margin:auto;}
+.card{background:white;border:2px solid #111;border-radius:12px;padding:0;overflow:hidden;box-shadow:3px 3px 0 #111;}
+.card img{width:100%;height:130px;object-fit:cover;}
+.card-body{padding:10px;}
+.card-body b{color:#1B5E20;}
+.btn{display:inline-block;background:#1B5E20;color:white;padding:6px 12px;border-radius:20px;font-size:11px;text-decoration:none;margin-top:6px;}
+footer{background:#111;color:#777;text-align:center;padding:12px;font-size:10px;margin-top:15px;}
+@media(min-width:600px){.cards{grid-template-columns:1fr 1fr 1fr;}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div><span class="logo">GROUP LOGO</span> <b>DISCOVER NASUGBU</b></div>
+  <div style="margin-top:6px;">
+    <a href="index.html" class="active">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="contact.html">CONTACT</a>
+  </div>
+</div>
+
+<div class="hero">
+  <img src="banner.jpg"
+  <h1>Welcome to Nasugbu, Batangas!</h1>
+  <p>Beaches • Park • Islands • Local Place • 2-3 Hours from Manila</p>
+</div>
+
+<div class="cards">
+  <div class="card">
+    <img src="Beach.jpg"
+    <div class="card-body"><b>Nasugbu Beach</b><p style="font-size:11px;color:#555;">beach, perfect for family outing at swimming.</p><a class="btn" href="gallery.html">View Photos</a></div>
+  </div>
+  <div class="card">
+    <img src="Perya.jpg"
+    <div class="card-body"><b>Nasugbu Perya</b><p style="font-size:11px;color:#555;">Maraming rides.</p><a class="btn" href="about.html">Learn More</a></div>
+  </div>
+  <div class="card">
+    <img src="Plaza.jpg"
+    <div class="card-body"><b> Local Place</b><p style="font-size:11px;color:#555;">Plaza sa Nasugbu.</p><a class="btn" href="gallery.html">View Foods</a></div>
+  </div>
+</div>
+
+<footer>GROUP [Your Group Name] • Grade 9 • Computer Project 2026<br>Members: [Names]</footer>
+</body>
+</html>

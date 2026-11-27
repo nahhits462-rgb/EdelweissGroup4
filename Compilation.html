@@ -1,0 +1,396 @@
+;<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Digital Compilation Folder - TLE 9</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 12px;
+    font-family: 'Fredoka', sans-serif;
+    color: #1e293b;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #fef08a;
+    background-image:
+        radial-gradient(circle at 15% 15%, rgba(251,113,133,.35) 0%, transparent 40%),
+        radial-gradient(circle at 85% 20%, rgba(56,189,248,.4) 0%, transparent 45%),
+        radial-gradient(circle at 20% 85%, rgba(168,85,247,.35) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(74,222,128,.4) 0%, transparent 45%),
+        radial-gradient(#fbbf24 2px, transparent 2px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 24px 24px;
+}
+
+.bg-clipart {
+    position: absolute;
+    font-size: 2.5rem;
+    opacity: .7;
+    user-select: none;
+    pointer-events: none;
+    animation: floatAnim 6s ease-in-out infinite;
+    z-index: 0;
+}
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(6deg); }
+}
+
+main {
+    max-width: 72rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+.cut-line-container {
+    padding: 12px;
+    border-radius: 2.5rem;
+    background-color: rgba(255,255,255,.75);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+    background-image:
+        repeating-linear-gradient(0deg, #64748b, #64748b 8px, transparent 8px, transparent 16px),
+        repeating-linear-gradient(90deg, #64748b, #64748b 8px, transparent 8px, transparent 16px),
+        repeating-linear-gradient(180deg, #64748b, #64748b 8px, transparent 8px, transparent 16px),
+        repeating-linear-gradient(270deg, #64748b, #64748b 8px, transparent 8px, transparent 16px);
+    background-size: 3px 100%, 100% 3px, 3px 100%, 100% 3px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+}
+
+.print-sheet {
+    background: rgba(240,249,255,.9);
+    border-radius: 2rem;
+    padding: 16px;
+    border: 6px solid #fff;
+    box-shadow: 0 10px 25px -5px rgba(0,0,0,.2), 0 0 0 6px #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Header banner */
+.banner {
+    background: linear-gradient(to right, #8b5cf6, #d946ef, #fbbf24);
+    border: 4px solid #0f172a;
+    border-radius: 1rem;
+    padding: 16px;
+    color: #fff;
+    box-shadow: 5px 5px 0 0 #0f172a;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+}
+.banner-deco {
+    position: absolute;
+    right: -24px; bottom: -24px;
+    opacity: .2;
+    font-size: 6rem;
+    font-weight: 800;
+    font-family: 'JetBrains Mono', monospace;
+    user-select: none;
+}
+.banner-inner { position: relative; z-index: 10; }
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #fde047;
+    color: #0f172a;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 2px 12px;
+    border-radius: 999px;
+    border: 2px solid #0f172a;
+    margin-bottom: 8px;
+}
+.banner h2 {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: .025em;
+    color: #fff;
+    text-shadow: 0 3px 0 #0f172a;
+    outline: none;
+}
+.banner p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fef9c3;
+    text-shadow: 0 1px 1px #0f172a;
+    outline: none;
+}
+
+.info-row {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 2px solid rgba(255,255,255,.4);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+}
+.info-box {
+    background: rgba(255,255,255,.3);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: .75rem;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+}
+.info-box .label {
+    color: #fef08a;
+    font-weight: 800;
+    text-shadow: 0 1px 1px #000;
+    white-space: nowrap;
+}
+.info-box .value {
+    flex: 1;
+    min-width: 0;
+    font-weight: 700;
+    color: #fff;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Grid of cards */
+#activityGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.slot-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background: #fff;
+    border: 2px solid #0f172a;
+    box-shadow: 3px 3px 0 0 #0f172a;
+    border-radius: 1rem;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    min-width: 0;
+    transition: transform .15s ease;
+}
+.slot-card:hover { transform: translateY(-4px) scale(1.05); }
+.slot-card.red {
+    border: 4px solid #ef4444;
+    box-shadow: 4px 4px 0 0 #ef4444;
+}
+
+.card-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+.card-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    font-size: 12px;
+    color: #64748b;
+}
+.card-file { font-size: 12px; color: #94a3b8; }
+.red .card-num { color: #dc2626; }
+.red .card-file { color: #ef4444; }
+
+.icon-box {
+    width: 56px; height: 56px;
+    border-radius: 1rem;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4px 0;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    font-size: 1.5rem;
+}
+
+.card-name-wrap { width: 100%; margin-top: 4px; }
+.card-name {
+    display: block;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 800;
+    font-size: 11px;
+    line-height: 1.25;
+    color: #4f46e5;
+    text-decoration: underline;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.red .card-name { color: #dc2626; }
+
+@media (min-width: 640px) {
+    body { padding: 24px; }
+    .cut-line-container { padding: 24px; }
+    .print-sheet { padding: 24px; }
+    .banner { padding: 20px; }
+    .banner h2 { font-size: 1.875rem; }
+    .banner p { font-size: 14px; }
+    .info-row { grid-template-columns: repeat(3, 1fr); }
+    #activityGrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .slot-card { padding: 12px; }
+    .icon-box { width: 64px; height: 64px; font-size: 1.875rem; }
+    .card-name { font-size: 12px; }
+}
+@media (min-width: 768px) {
+    .banner h2 { font-size: 2.25rem; }
+    #activityGrid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
+@media print {
+    body { background: #fff !important; padding: 0 !important; }
+    .bg-clipart { display: none !important; }
+    .print-sheet { box-shadow: none !important; border: none !important; width: 100% !important; max-width: 100% !important; padding: 0 !important; margin: 0 !important; }
+    .cut-line-container { border: 2px dashed #64748b !important; background-image: none !important; padding: 12px !important; }
+    .slot-card { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-clipart" style="top: 5%; left: 4%; animation-delay: 0s;">🌟</div>
+<div class="bg-clipart" style="top: 12%; right: 5%; animation-delay: 1s;">💻</div>
+<div class="bg-clipart" style="top: 35%; left: 2%; animation-delay: 2s;">🎨</div>
+<div class="bg-clipart" style="top: 50%; right: 3%; animation-delay: 1.5s;">🚀</div>
+<div class="bg-clipart" style="top: 75%; left: 5%; animation-delay: 2.5s;">🎈</div>
+<div class="bg-clipart" style="top: 88%; right: 4%; animation-delay: 0.8s;">⭐</div>
+<div class="bg-clipart" style="top: 25%; left: 48%; animation-delay: 1.2s;">⚡</div>
+
+<main>
+  <div class="cut-line-container">
+    <div id="rewardSheet" class="print-sheet">
+
+      <div class="banner">
+        <div class="banner-deco">&lt;/&gt;</div>
+        <div class="banner-inner">
+          <div class="badge">
+            <i class="fa-solid fa-code"></i>
+            <span contenteditable="true" style="outline:none">HTML &amp; CSS ACTIVITIES</span>
+          </div>
+          <h2 contenteditable="true">MY DIGITAL COMPILATION FOLDER</h2>
+          <p contenteditable="true">TLE 9 - Term 2 - ICT: Computer Programming</p>
+        </div>
+
+        <div class="info-row">
+          <div class="info-box">
+            <span class="label">Student:</span>
+            <span contenteditable="true" class="value">Arnel Jr C Balaga</span>
+          </div>
+          <div class="info-box">
+            <span class="label">Class:</span>
+            <span contenteditable="true" class="value">Grade 9 - Edelweiss</span>
+          </div>
+          <div class="info-box">
+            <span class="label">Instructor:</span>
+            <span contenteditable="true" class="value">CLARIBEL D. SISON</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="activityGrid"></div>
+
+    </div>
+  </div>
+</main>
+
+<script>
+const colors = {
+  indigo:  ['#e0e7ff', '#a5b4fc'],
+  sky:     ['#e0f2fe', '#7dd3fc'],
+  amber:   ['#fef3c7', '#fcd34d'],
+  emerald: ['#d1fae5', '#6ee7b7'],
+  pink:    ['#fce7f3', '#f9a8d4'],
+  purple:  ['#f3e8ff', '#d8b4fe'],
+  rose:    ['#ffe4e6', '#fda4af'],
+  teal:    ['#ccfbf1', '#5eead4'],
+  orange:  ['#ffedd5', '#fdba74'],
+  yellow:  ['#fef9c3', '#fde047'],
+  blue:    ['#dbeafe', '#93c5fd'],
+  cyan:    ['#cffafe', '#67e8f9'],
+  violet:  ['#ede9fe', '#c4b5fd'],
+  fuchsia: ['#fae8ff', '#f0abfc'],
+  lime:    ['#ecfccb', '#bef264']
+};
+
+const activities = [
+  { name: "Magic 5", file: "magic5.html", icon: "🪄", color: "indigo", highlightRed: false },
+  { name: "My Page", file: "My Page.html", icon: "📄", color: "sky", highlightRed: false },
+  { name: "Headings", file: "headings.html", icon: "🏷️", color: "amber", highlightRed: false },
+  { name: "Paragraph", file: "paragraph.html", icon: "✍️", color: "emerald", highlightRed: false },
+  { name: "Style Attribute", file: "style attribute.html", icon: "🎨", color: "pink", highlightRed: false },
+  { name: "Formatting Text", file: "formatting text.html", icon: "🔤", color: "purple", highlightRed: false },
+  { name: "My Gallery", file: "MY GALLERY.html", icon: "🖼️", color: "rose", highlightRed: false },
+  { name: "Types of list", file: "types of list.html", icon: "📋", color: "teal", highlightRed: false },
+  { name: "Table Element", file: "Table.html", icon: "📊", color: "orange", highlightRed: false },
+  { name: "Forms", file: "Form.html", icon: "📝", color: "yellow", highlightRed: false },
+  { name: "Link", file: "Link.html", icon: "🔗", color: "blue", highlightRed: false },
+  { name: "Basic Website", file: "home.html", icon: "🌐", color: "cyan", highlightRed: true },
+  { name: "CSS Basic", file: "cssbasic.html", icon: "🎯", color: "violet", highlightRed: false },
+  { name: "Css Format (Border, margin, padding)", file: "cssformat.html", icon: "📦", color: "fuchsia", highlightRed: false },
+  { name: "Css Table, List, Links", file: "csstable.html", icon: "📑", color: "lime", highlightRed: false },
+  { name: "CSS Animation, Transition", file: "cssanimationtransition.html", icon: "✨", color: "amber", highlightRed: false },
+  { name: "Css Box Model", file: "cssboxmodel.html", icon: "📐", color: "sky", highlightRed: false },
+  { name: "CSS transform", file: "csstransform.html", icon: "🔄", color: "indigo", highlightRed: false },
+  { name: "Compilation", file: "TERM-2-DIGITAL-COMPILATION(COPY).html", icon: "📁", color: "emerald", highlightRed: true },
+  { name: "Interactive Website", file: "Index.html", icon: "🚀", color: "rose", highlightRed: true }
+];
+
+function renderGrid() {
+  const grid = document.getElementById('activityGrid');
+  grid.innerHTML = '';
+
+  activities.forEach((item, index) => {
+    const [bg, border] = colors[item.color];
+    const slot = document.createElement('a');
+    slot.href = item.file;
+    slot.target = "_blank";
+    slot.className = 'slot-card' + (item.highlightRed ? ' red' : '');
+
+    slot.innerHTML = `
+      <div class="card-top">
+        <span class="card-num">#${index + 1}</span>
+        <i class="fa-solid fa-file-code card-file" title="HTML File Link"></i>
+      </div>
+      <div class="icon-box" style="border-color:${border}; box-shadow: inset 0 0 0 40px ${bg}22;">
+        <span>${item.icon}</span>
+      </div>
+      <div class="card-name-wrap">
+        <span class="card-name" title="Click to open HTML file">${item.name}</span>
+      </div>
+    `;
+    grid.appendChild(slot);
+  });
+}
+
+renderGrid();
+</script>
+</body>
+</html>

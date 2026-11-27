@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The CSS Colors Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            background-image: url('RunningManAnimation.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background-color: rgba(255,255,255,0.9);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            color: darkblue;
+            text-align: center;
+        }
+
+        h2 {
+            color: darkred;
+        }
+
+        /* Different text colors for each list */
+        .food {
+            color: red;
+        }
+
+        .colors {
+            color: blue;
+        }
+
+        .friends {
+            color: green;
+        }
+
+        .hobbies {
+            color: purple;
+        }
+
+        .country {
+            color: darkorange;
+        }
+
+        .shows {
+            color: darkmagenta;
+        }
+
+        /* Family list background color */
+        .family {
+            color: darkblue;
+            background-color: lightyellow;
+            padding: 15px 30px;
+            border-radius: 10px;
+        }
+
+        /* Teachers list */
+        .teachers {
+            color: darkgreen;
+            background-color: lightcyan;
+            padding: 15px 30px;
+            border-radius: 10px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Welcome To Fortfolio - My List</h1>
+        <hr>
+
+        <h2>My Favorite Lists</h2>
+
+        <h3><span style="background-color: yellow; padding: 2px 5px;">Favorite Food (A,B,C)</span></h3>
+        <ol type="A" class="food">
+            <li>Carbonara</li>
+            <li>COFFEE</li>
+            <li>Spanish Bread</li>
+        </ol>
+
+        <h3><span style="background-color: yellow; padding: 2px 5px;">Favorite Color (a,b,c)</span></h3>
+        <ol type="a" class="colors">
+            <li>Black</li>
+            <li>Blue</li>
+            <li>Red</li>
+        </ol>
+
+        <h3><span style="background-color: yellow; padding: 2px 5px;">Best Friends (1,2,3)</span></h3>
+        <ol type="1" class="friends">
+            <li>Alchim</li>
+            <li>Francis Kervie</li>
+            <li>Ivan Lenard</li>
+        </ol>
+
+        <h3><span style="background-color: yellow; padding: 2px 5px;">Hobbies (I, II, III)</span></h3>
+        <ol type="I" class="hobbies">
+            <li>Doomscrolling On TikTok</li>
+            <li>Playing Online Games</li>
+            <li>Watching Anime</li>
+        </ol>
+
+        <h3><span style="background-color: yellow; padding: 2px 5px;">Dream Country (i, ii, iii)</span></h3>
+        <ol type="i" class="country">
+            <li>Japan</li>
+            <li>South Korea</li>
+            <li>Switzerland</li>
+        </ol>
+
+        <hr>
+
+        <h2>Favorite TV Show or Series To Watch</h2>
+        <ul class="shows">
+            <li>Jujutsu Kaisen</li>
+            <li>Solo Leveling</li>
+            <li>The Fragrant Flower Blooms With Dignity</li>
+            <li>Attack on Titan</li>
+        </ul>
+
+        <br>
+        <hr>
+
+        <h2>Family Members</h2>
+        <dl class="family">
+            <dt style="font-weight: bold; margin-top: 8px;">Mother</dt>
+            <dd>Cathy</dd>
+
+            <dt style="font-weight: bold; margin-top: 8px;">Father</dt>
+            <dd>Bernie</dd>
+
+            <dt style="font-weight: bold; margin-top: 8px;">Siblings (Oldest, Youngest)</dt>
+            <dd>Oldest - Me</dd>
+            <dd>Youngest - Josh</dd>
+        </dl>
+
+        <h2>Subject Teachers</h2>
+
+        <img src="schoollogo.jpeg" class="logo" alt="School Logo">
+
+        <dl class="teachers">
+            <dt style="font-weight: bold; margin-top: 8px;">ICT - Computer Programming</dt>
+            <dd>Maam Claribel</dd>
+
+            <dt style="font-weight: bold; margin-top: 8px;">Math</dt>
+            <dd>Maam Lady</dd>
+
+            <dt style="font-weight: bold; margin-top: 8px;">Mapeh</dt>
+            <dd>Sir Apdon</dd>
+
+            <dt style="font-weight: bold; margin-top: 8px;">Science</dt>
+            <dd>Maam Chai</dd>
+
+            <dt style="font-weight: bold; margin-top: 8px;">Filipino</dt>
+            <dd>Ma'am Mhelisa</dd>
+
+            <dt style="font-weight: bold; margin-top: 8px;">English</dt>
+            <dd>Maam Kath</dd>
+
+            <dt style="font-weight: bold; margin-top: 8px;">AP</dt>
+            <dd>Maam Gracee</dd>
+
+            <dt style="font-weight: bold; margin-top: 8px;">VE</dt>
+            <dd>Maam Shari</dd>
+        </dl>
+
+    </div>
+
+</body>
+</html>

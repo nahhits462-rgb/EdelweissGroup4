@@ -1,37 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - Discover Nasugbu</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
-body{background:#FFFDF0;}
-.top{background:#1B5E20;color:#fff;padding:12px;text-align:center;position:sticky;top:0;}
-.logo{background:#FFC107;color:#000;padding:3px 8px;border-radius:5px;font-weight:900;font-size:12px;}
-.top a{color:#C8E6C9;text-decoration:none;margin:0 6px;font-size:11px;font-weight:bold;}
-.top a.active{color:#FFEB3B;border-bottom:2px solid #FFEB3B;}
-form{max-width:500px;margin:15px auto;background:white;border:2px solid #111;border-radius:12px;padding:15px;box-shadow:3px 3px 0 #111;}
-input,textarea{width:100%;padding:10px;margin:6px 0 10px;border:1px solid #ccc;border-radius:8px;}
-.btn{background:#1B5E20;color:white;padding:10px 18px;border:none;border-radius:20px;font-weight:bold;width:100%;}
-footer{background:#111;color:#777;text-align:center;padding:12px;font-size:10px;margin-top:15px;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nasugbu Fiesta</title>
 </head>
+
 <body>
-<div class="top">
-  <div><span class="logo">GROUP LOGO</span> <b>DISCOVER NASUGBU</b></div>
-  <div style="margin-top:6px;">
-    <a href="index.html">HOME</a><a href="about.html">ABOUT</a><a href="gallery.html">GALLERY</a><a href="contact.html" class="active">CONTACT</a>
-  </div>
-</div>
-<form>
-  <h3 style="color:#1B5E20;">Contact Us</h3>
-  <p style="font-size:11px;color:#555;margin:5px 0 10px;">Ask about Nasugbu local places!</p>
-  <label style="font-size:12px;">Full Name</label><input type="text" placeholder="Your Name" required>
-  <label style="font-size:12px;">Email</label><input type="email" placeholder="you@email.com" required>
-  <label style="font-size:12px;">Message</label><textarea rows="4" placeholder="I want to visit Calayo Beach..." required></textarea>
-  <button class="btn" type="submit">Send Message</button>
-  <p style="font-size:11px;color:#555;margin-top:10px;"><b>Location:</b> Nasugbu, Batangas<br><b>Email:</b> hello@nasugbu.ph<br><b>Tourism:</b> Nasugbu Municipal Hall</p>
-</form>
-<footer>GROUP [Your Group Name] • Grade 9 • Computer Project 2026<br>Members: [Names]</footer>
+
+    <!-- HEADER -->
+    <header>
+        <h1>🎉 NASUGBU FIESTA 🎉</h1>
+        <p>Celebrating the Culture and Tradition of Nasugbu</p>
+
+        <nav>
+            <a href="index.html">HOME</a> |
+            <a href="about.html">ABOUT</a> |
+            <a href="gallery.html">GALLERY</a> |
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- CONTACT SECTION -->
+    <main>
+        <section>
+            <h2>📩 Contact Us</h2>
+
+            <p>
+                Have questions about Nasugbu Fiesta?
+                We would love to hear from you!
+                Send us a message using the form below.
+            </p>
+
+            <form action="#" method="post">
+
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name"
+                placeholder="Enter your full name" required>
+                <br><br>
+
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email"
+                placeholder="Enter your email address" required>
+                <br><br>
+
+                <label for="subject">Subject:</label><br>
+                <input type="text" id="subject" name="subject"
+                placeholder="Enter your subject" required>
+                <br><br>
+
+                <label for="message">Your Message:</label><br>
+                <textarea id="message" name="message"
+                rows="5" cols="30"
+                placeholder="Write your message here..."
+                required></textarea>
+                <br><br>
+
+                <button type="submit">SEND MESSAGE ✉️</button>
+
+            </form>
+        </section>
+
+        <hr>
+
+        <!-- GROUP INFORMATION -->
+        <section>
+            <h2>👥 Group Information</h2>
+
+            <p><strong>Location:</strong> Nasugbu, Batangas</p>
+
+            <p><strong>Email:</strong>
+                groupemail@gmail.com
+            </p>
+
+            <p><strong>Group Name:</strong>
+                Nasugbu Fiesta
+            </p>
+
+            <h3>Group Members:</h3>
+            <ul>
+                <li>[Name of Member 1]</li>
+                <li>[Name of Member 2]</li>
+                <li>[Name of Member 3]</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- CLOSING MESSAGE -->
+        <section>
+            <h2>Thank You for Visiting!</h2>
+
+            <p>
+                Thank you for supporting and celebrating
+                the beautiful traditions, culture, and
+                festivities of Nasugbu, Batangas.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <hr>
+        <p>&copy; 2026 Nasugbu Fiesta. All Rights Reserved.</p>
+        <p>Made with ❤️ by our Group</p>
+    </footer>
+
 </body>
 </html>

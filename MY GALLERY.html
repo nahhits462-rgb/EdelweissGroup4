@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Multimedia Gallery</title>
+<style>
+body { 
+  background-color: #E4DA72; 
+  font-family: Arial, sans-serif; 
+  text-align: center; 
+  padding: 20px; 
+}
+h1 { color: #333; }
+.gallery { 
+  display: flex; 
+  justify-content: center; 
+  gap: 30px; 
+  flex-wrap: wrap; 
+  margin-top: 20px; 
+}
+.item { 
+  background: white; 
+  padding: 15px; 
+  border-radius: 15px; 
+  width: 280px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+img, video { 
+  width: 250px; 
+  height: 250px; 
+  object-fit: cover; 
+  border-radius: 10px; 
+}
+p { text-align: left; color: #444; }
+
+/* dagdag ko para sa audio/video section */
+.media-section {
+  margin-top: 40px;
+}
+.media-card {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  margin: 15px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+video {
+  width: 100%;
+  height: auto;
+}
+audio {
+  width: 100%;
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<h1>My Multimedia Gallery</h1>
+<div class="gallery">
+  <!-- 1. BABY -->
+  <div class="item">
+    <h2>Baby</h2>
+    <img src="5.jpeg" alt="Me as a baby">
+    <p>This is me when I was a baby. I was only almost a year old. I was small, chubby, and my parents always said I had big eyes.</p>
+  </div>
+
+  <!-- 2. TODDLER -->
+  <div class="item">
+    <h2>Toddler</h2>
+    <img src="E.jpeg" alt="Me as a toddler">
+    <p>This is me as a toddler, around 3-4 years old. I loved playing outside and I was very curious about everything. This is when I started to walk and talk.</p>
+  </div>
+
+  <!-- 3. PRESENT -->
+  <div class="item">
+    <h2>Present</h2>
+    <img src="4.jpg" alt="Me now">
+    <p>This is me in the present. I am now a student. I enjoy learning new things, spending time with friends, and improving myself every day.</p>
+  </div>
+</div>
+
+<!-- VIDEO & AUDIO NAKA-CARD NA -->
+<div class="media-section">
+  <div class="gallery">
+    <div class="media-card">
+      <h2>My Video</h2>
+      <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+      <p>This is my tuff edit.</p>
+    </div>
+
+    <div class="media-card">
+      <h2>My Audio</h2>
+      <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+      </audio>
+      <p>This is my audio / music.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+  </html>

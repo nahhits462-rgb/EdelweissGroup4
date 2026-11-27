@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    span.a {
+        display: inline; /* the default for span */
+        width: 100px;  height: 100px;  padding: 5px;  border: 1px solid blue;
+        background-color: yellow;
+    }
+    span.b {
+        display: inline-block;  width: 100px;  height: 100px;
+        padding: 5px;  border: 1px solid blue;  background-color: yellow;
+    }
+    span.c {
+        display: block;  width: 100px;  height: 100px;
+        padding: 5px;  border: 1px solid blue;  background-color: yellow;
+    }
+    p {
+        padding: 40px;
+        border: 5px solid gray;
+        margin: 0;
+    }
+    div {
+        padding: 10px;
+        border: 15px solid green;
+        margin: 10px;
+    }
+    .box {
+        width: 320px;
+        height: 60px;
+        padding: 10px;
+        border: 15px solid grey;
+        margin: 10px;
+    }
+</style>
+</head>
+<body>
+    <h2>Demonstrating the Box Model</h2>
+        <p>The CSS box model is essentially a box that wraps around every HTML
+        element. It consists of: borders, padding, margins, and the actual content.
+        </p>
+        <div>This text is the content of the box. We have added a 10px padding, 10px
+        margin and a 15px green border.</div>
+        <div class="box">This box contains an additional 320px Width and 60px Height.
+        It also have a 10px padding, 10px margin and a 15px grey border.</div>
+    <h1>The display Property</h1>
+    <h2>display: inline</h2>
+    <div>
+        This example will align the box within the paragraph.
+        <span class="a">Content1</span> <span class="a">Content2</span>
+        and will continue with the text inline with it.
+    </div>
+    <h2>display: inline-block</h2>
+    <div>
+        <span class="b">Content1</span>
+        <span class="b">Content2</span>
+        <br><br> <br>
+        This example however, will align the box on the paragraph and will continue to
+        expand up to the end of the screen.
+        But the continuation of text will be on the next line of the box.
+    </div>
+    <h2>display: block</h2>
+    <div>
+        <span class="c">Content1</span>
+        <span class="c">Content2</span>
+        This example shows the use of box in block format. <br> <br>
+        The box will appear on top of the other.
+    </div>
+</body>
+</html>
